@@ -42,3 +42,8 @@ jobs:
       with:
         name: app-release
         path: build/app/outputs/flutter-apk/app-release.apk
+    
+    - name: Push APK to Releases
+      uses: ncipollo/release-action@v1
+      with:
+        artifacts: "build/app/outputs/apk/debug/*.apk"
